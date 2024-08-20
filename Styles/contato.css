@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+
+@font-face {
+    font-family: "BrandikSans";
+    src: url(../fontes/BrandinkSans-Light.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "quantum";
+    src: url(../fontes/Quantum.otf) format("truetype");
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------Cores_e_Fontes-------*/
+:root{
+    --blue: #14C5EC;
+    --light-blue: #BBEEF9;
+    --dark-blue: #095f72;
+    --dark-blue2: #3E8FCF;
+    --white: #EDFBFE;
+    --gray: #E6E6E6;
+}
+
+body{   
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    color: #1e1e1e;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);          
+}
+
+/*-------Menu-------*/
+.menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
+    font-family: "Roboto Flex";
+    padding: 20px;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu a{
+    color: var(--white);
+    padding: 10px 17px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*-------Botão_de_ajude-------*/
+.menu button{
+    width: 15%;
+    height: 4vh;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*-------Menu_Hamburguer-------*/
+.menu span{
+    display: none;
+}
+
+/*-------Logo-------*/
+.menu img{
+    width: 76px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+/*-------Banner-------*/
+.banner{
+    width: 100%;
+    height: 50vh;
+}
+
+#parallax{
+    background-image: url(../imagens/Banner_de_coelho.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-------Contato-------*/
+.contatos{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    border-top: 2px solid rgba(0, 0, 0, 0.13);
+    font-family: var(--fonte2);
+}
+
+.contato{
+    width: 70%;
+    height: 100vh;
+}
+
+/*-------Titulo-------*/
+.titulo{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 10px solid var(--dark-blue);
+}
+
+.titulo h1{
+    color: var(--dark-blue);
+    font-size: 50px;
+    font-family: "Roboto Flex";
+}
+
+/*-------Local-------*/
+.local{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.local img{
+    width: 40%;
+    margin-right: 100px;
+}
+
+/*-------Info-------*/
+.info{
+    width: 100%;
+    height: 60vh;
+    padding: 30px;
+    color: var(--dark-blue);
+    font-family: "BrandikSans";
+}
+
+.info h3{
+    font-size: 30px;
+}
+
+.info h2{
+    font-size: 50px;
+}
+
+.info h4{
+    font-size: 40px;
+}
+
+.info p{
+    font-size: 30px;
+}
+
+/*-------Telefone-------*/
+#telefone{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/*-------Redes-------*/
+.redes{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-blue2);
+    padding: 10px;
+    gap: 40%;
+    font-family: "BrandikSans";
+}
+
+.redes h2{
+    font-size: 30px;
+    color: black;
+}
+
+/*-------Icon-------*/
+.icon img{
+    width: 50px;
+    height: 50px;
+}
+
+/*-------Banner_lateral-------*/
+.banner_lateral{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-image: url(../imagens/Imagem_de_fundo_azul.png);
+}
+
+.banner_lateral img{
+    width: 80%;
+    margin-top: 37%;
+}
+
+/*-------Patrocinadores-------*/
+.patrocinadores{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 10px solid black;
+    margin-top: 10%;
+    font-family: "Roboto Flex";
+}
+
+.patrocinadores h1{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+/*-------Imagens-------*/
+.imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    gap: 30px;
+}
+
+.imagem img{
+    width: 100px;
+    height: 100px;
+}
+
+/*-------Banner2-------*/
+.banner2{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 150px;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: 400;
+    gap: 10px;
+}
+
+/*-------Fonte-------*/
+#font{
+    font-family: 'quantum';
+}
+
+/*-------Responsividade-------*/
+@media screen and (max-width: 768px) {
+    .contatos{
+        height: 130vh;
+        flex-direction: column;
+    }
+
+    .contato{
+        width: 100%;
+    }
+
+    .local{
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .local img{
+        width: 46%;
+        margin-top: -50px;
+        margin-right: 0px;
+    }
+
+    .info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .info h3{
+        font-size: 20px;
+    }
+
+    .info h2{
+        font-size: 25px;
+    }
+
+    .info h4{
+        font-size: 20px;
+    }
+
+    #telefone{
+        font-size: 16px;
+    }
+
+    .redes{
+        gap: 20%;
+    }
+
+    .redes h2{
+        font-size: 20px;
+    }
+
+    .icon img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .banner_lateral{
+        display: none;
+    }
+
+    .patrocinadores h1{
+        font-size: 30px;
+    }
+
+    .imagens{
+        gap: 10px;
+    }
+
+    .imagem img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .banner2{
+        font-size: 12px;
+    }
+
+    .menu img{
+        margin-left: 0px;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu span{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu ul{
+        display: none;
+    }
+
+    .menu li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu button{
+        width: 200px;
+    }
+}

@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+
+@font-face {
+    font-family: "quantum";
+    src: url(../fontes/Quantum.otf) format("truetype");
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------Cores_e_Fontes-------*/
+:root{
+    --blue: #14C5EC;
+    --light-blue: #BBEEF9;
+    --dark-blue: #095f72;
+    --dark-blue2: #3E8FCF;
+    --white: #EDFBFE;
+    --gray: #E6E6E6;
+}
+
+body{   
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    color: #1e1e1e;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);          
+}
+
+/*-------Menu-------*/
+.menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
+    font-family: "Roboto Flex";
+    padding: 20px;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu a{
+    color: var(--white);
+    padding: 10px 17px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*-------Menu_Hamburguer-------*/
+.menu span{
+    display: none;
+}
+
+/*-------Botão_de_ajude-------*/
+.menu button{
+    width: 15%;
+    height: 4vh;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*-------Logo-------*/
+.menu img{
+    width: 76px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+/*-------Banner-------*/
+.banner{
+    width: 100%;
+    height: 50vh;
+}
+
+#parallax{
+    background-image: url(../imagens/Banner_de_gatos.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-------Titulo-------*/
+.titulo{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Flex";
+}
+
+.titulo h1{
+    font-size: 50px;
+}
+
+/*-------Telecomunicador-------*/
+.telecomunicador{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    gap: 5%;
+}
+
+.telecomunicador img{
+    width: 50%;
+    height: 70vh;
+}
+
+/*-------Titulo2-------*/
+.titulo2{
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    margin-right: 50px;
+}
+
+.titulo2 h2{
+    color: var(--blue);
+    font-size: 30px;
+    font-family: "Zen Kaku Gothic New";
+    margin-bottom: 50px;
+}
+
+/*-------Texto-------*/
+.textos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Zen Kaku Gothic New";
+    gap: 10%;
+}
+
+.texto{
+    width: 40%;
+    font-size: 17px;
+    text-align: justify;
+}
+
+/*-------Resgate-------*/
+.resgate{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    margin-top: 14%;
+    gap: 5%;
+}
+
+.resgate img{
+    width: 50%;
+    height: 70vh;
+}
+
+/*-------Titulo3-------*/
+.titulo3{
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    margin-right: 50px;
+}
+
+.titulo3 h2{
+    color: var(--blue);
+    font-size: 30px;
+    font-family: "Zen Kaku Gothic New";
+    margin-bottom: 50px;
+}
+
+/*-------Casa-------*/
+.casa{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.5);
+    margin-top: 14%;
+    gap: 5%;
+}
+
+.casa img{
+    width: 38%;
+    height: 70vh;
+}
+
+/*-------Titulo4-------*/
+.titulo4{
+    width: 70%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 30px;
+    margin-right: 50px;
+}
+
+.titulo4 h2{
+    color: var(--blue);
+    font-size: 30px;
+    font-family: "Zen Kaku Gothic New";
+    margin-bottom: 50px;
+}
+
+/*-------Banner2-------*/
+.banner2{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 150px;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: 400;
+    gap: 10px;
+}
+
+/*-------Fonte-------*/
+#font{
+    font-family: 'quantum';
+}
+
+/*-------Responsividade-------*/
+@media screen and (max-width: 768px) {
+    .titulo h1{
+        font-size: 37px;
+    }
+
+    .telecomunicador{
+        height: 78vh;
+        flex-direction: column;
+    }
+
+    .telecomunicador img{
+        width: 100%;
+        height: 35vh;
+    }
+
+    .titulo2{
+        width: 97%;
+        height: 35vh;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .titulo2 h2{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .texto p{
+        font-size: 10px;
+    }
+    
+    .texto li{
+        font-size: 10px;
+    }
+
+    .resgate{
+        height: 78vh;
+        flex-direction: column;
+    }
+
+    .resgate img{
+        width: 100%;
+        height: 32vh;
+    }
+
+    .titulo3{
+        width: 97%;
+        height: 35vh;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .titulo3 h2{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .texto p{
+        font-size: 10px;
+    }
+
+    .casa{
+        height: 78vh;
+        flex-direction: column;
+    }
+
+    .casa img{
+        width: 100%;
+        height: 32vh;
+    }
+
+    .titulo4{
+        width: 97%;
+        height: 35vh;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .titulo4 h2{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .texto p{
+        font-size: 10px;
+    }
+
+    .banner2{
+        font-size: 12px;
+    }
+
+    .menu img{
+        margin-left: 0px;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu span{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu ul{
+        display: none;
+    }
+
+    .menu li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu button{
+        width: 200px;
+    }
+}

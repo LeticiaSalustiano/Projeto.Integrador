@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@100..800&display=swap');
+
+@font-face {
+    font-family: "quantum";
+    src: url(../fontes/Quantum.otf) format("truetype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------Cores_e_Fontes-------*/
+:root{
+    --blue: #14C5EC;
+    --light-blue: #BBEEF9;
+    --dark-blue: #095f72;
+    --dark-blue2: #3E8FCF;
+    --white: #EDFBFE;
+    --gray: #F8EAEA;
+}
+
+body{   
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    color: #1e1e1e;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);          
+}
+
+/*-------Menu-------*/
+.menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
+    font-family: "Roboto Flex";
+    padding: 20px;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu a{
+    color: var(--white);
+    padding: 10px 17px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*-------Botão_de_ajude-------*/
+.menu button{
+    width: 15%;
+    height: 4vh;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*-------Menu_Hamburguer-------*/
+.menu span{
+    display: none;
+}
+
+/*-------Logo-------*/
+.menu img{
+    width: 76px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+/*-------Banner-------*/
+.banner{
+    width: 100%;
+    height: 50vh;
+}
+
+#parallax{
+    background-image: url(../imagens/Banner_de_coelhos.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-------Code-------*/
+.code{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 10px solid black;
+    background-color: var(--gray);
+    margin-top: 10%;
+}
+
+.code h1{
+    font-size: 50px;
+    font-family: "Amatic SC";
+}
+
+.code h2{
+    font-size: 40px;
+    color: var(--blue);
+    font-family: "Anek Telugu";
+}
+
+/*-------Link-------*/
+.link{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.link img{
+    width: 50%;
+    height: 50vh;
+}
+
+.link h3{
+    font-family: "Amatic SC";
+    font-size: 40px;
+}
+
+/*-------Chave_Pix-------*/
+.chave{
+    width: 40%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    -webkit-box-shadow: 0px 6px 9px -3px rgba(0,0,0,0.58);
+    -moz-box-shadow: 0px 6px 9px -3px rgba(0,0,0,0.58);
+    box-shadow: 0px 6px 9px -3px rgba(0,0,0,0.58);
+    margin-top: 20px;
+    gap: 50px;
+}
+
+.chave p{
+    color: var(--dark-blue);
+    font-size: 24px;
+    font-family: "Anek Telugu";
+}
+
+/*-------Patrocinadores-------*/
+.patrocinadores{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Roboto Flex";
+}
+
+.patrocinadores h1{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+/*-------Imagens-------*/
+.imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    gap: 30px;
+}
+
+.imagem img{
+    width: 100px;
+    height: 100px;
+}
+
+/*-------Banner2-------*/
+.banner2{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 150px;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: 400;
+    gap: 10px;
+}
+
+/*-------Fonte-------*/
+#font{
+    font-family: 'quantum';
+}
+
+/*-------Responsividade-------*/
+@media screen and (max-width: 768px) {
+    .code h1{
+        font-size: 40px;
+    }
+
+    .code h2{
+        font-size: 30px;
+    }
+
+    .link{
+        width: 100%;
+    }
+
+    .link img{
+        width: 70%;
+        height: 40vh;
+    }
+
+    .chave{
+        width: 70%;
+    }
+
+    .chave p{
+        font-size: 20px;
+    }
+
+    .patrocinadores h1{
+        font-size: 30px;
+    }
+
+    .imagens{
+        gap: 10px;
+    }
+
+    .imagem img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .banner2{
+        font-size: 12px;
+    }
+
+    .menu img{
+        margin-left: 0px;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu span{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu ul{
+        display: none;
+    }
+
+    .menu li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu button{
+        width: 200px;
+    }
+}

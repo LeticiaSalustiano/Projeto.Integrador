@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+
+@font-face {
+    font-family: "quantum";
+    src: url(../fontes/Quantum.otf) format("truetype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------Cores-------*/
+:root{
+    --blue: #14C5EC;
+    --light-blue: #BBEEF9;
+    --dark-blue: #095f72;
+    --white: #EDFBFE;
+}
+
+body{   
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    color: #1e1e1e;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);          
+}
+
+/*-------Menu-------*/
+.menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
+    font-family: "Roboto Flex";
+    padding: 20px;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu a{
+    color: var(--white);
+    padding: 10px 17px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/*-------Botão_de_ajude-------*/
+.menu button{
+    width: 15%;
+    height: 4vh;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*-------Menu_Hamburguer-------*/
+.menu span{
+    display: none;
+}
+
+/*-------Logo-------*/
+.menu img{
+    width: 76px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+/*-------Banner-------*/
+.banner{
+    width: 100%;
+    height: 100vh;
+}
+
+#parallax{
+    width: 100%;
+    height: 60vh;
+    background-image: url(../imagens/Banner_de_gato.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-------Titulo-------*/
+.titulo{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Roboto Flex";
+}
+
+.titulo h1{
+    color: var(--blue);
+    font-size: 50px;
+}
+
+.titulo h2{
+    font-size: 30px;
+}
+
+.titulo p{
+    font-size: 20px;
+    color: gray;
+}
+
+/*-------Dados-------*/
+.dados{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*-------info-------*/
+.info{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info input{
+    width: 90%;
+    height: 7vh;
+    border: none;
+    outline: none;
+    background-color: rgba(238, 238, 238, 0.37);
+    border: 2px solid black;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.info input::placeholder{
+    color: black;
+}
+
+/*-------info2-------*/
+.info2{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info2 input{
+    width: 90%;
+    height: 7vh;
+    border: none;
+    outline: none;
+    background-color: rgba(238, 238, 238, 0.37);
+    border: 2px solid black;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.info2 input::placeholder{
+    color: black;
+}
+
+/*-------info3-------*/
+.info3{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 73px;
+}
+
+.info3 input{
+    width: 40%;
+    height: 7vh;
+    border: none;
+    outline: none;
+    background-color: rgba(238, 238, 238, 0.37);
+    border: 2px solid black;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+.info3 input::placeholder{
+    color: black;
+}
+
+/*-------info4-------*/
+.info4{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.info4 input{
+    width: 30%;
+    height: 7vh;
+    border: none;
+    outline: none;
+    background-color: #eeeeee5e;
+    border: 2px solid black;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    color: black;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+#barra{
+    width: 41%;
+}
+
+#barra2{
+    width: 20%;
+}
+
+/*-------Links-------*/
+.links{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Flex";
+    font-size: 30px;
+    gap: 30px;
+}
+
+.links input{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/*-------Botão-------*/
+.botao{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao button{
+    width: 20%;
+    height: 7vh;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 30px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.botao button:hover{
+    background-color: var(--dark-blue);
+}
+
+/*-------Desenho-------*/
+.desenho{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 10px solid black;
+}
+
+.desenho img{
+    width: 50%;
+}
+
+/*-------Patrocinadores-------*/
+.patrocinadores{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Roboto Flex";
+}
+
+.patrocinadores h1{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+/*-------Imagens-------*/
+.imagens{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    gap: 30px;
+}
+
+.imagem img{
+    width: 100px;
+    height: 100px;
+}
+
+/*-------Banner2-------*/
+.banner2{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 150px;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: 400;
+    gap: 10px;
+}
+
+/*-------Fonte-------*/
+#font{
+    font-family: 'quantum';
+}
+
+/*-------Responsividade-------*/
+@media screen and (max-width: 768px) {
+    .titulo h1{
+        font-size: 30px;
+    }
+
+    .titulo h2{
+        font-size: 20px;
+    }
+
+    .titulo p{
+        width: 90%;
+        font-size: 15px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .info{
+        width: 100%;
+    }
+
+    .info input{
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .info2{
+        width: 100%;
+    }
+
+    .info2 input{
+        width: 80%;
+        font-size: 14px;
+    }
+
+    .info3{
+        gap: 10px;
+    }
+
+    .info4{
+        gap: 10px;
+    }
+
+    .info4 input{
+        width: 25%;
+        font-size: 14px;
+    }
+
+    .links{
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .links input{
+        width: 15px;
+        height: 15px;
+    }
+
+    .botao button{
+        width: 50%;
+    }
+
+    .desenho img{
+        width: 90%;
+    }
+
+    .patrocinadores h1{
+        font-size: 30px;
+    }
+
+    .imagens{
+        gap: 10px;
+    }
+
+    .imagem img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .banner2{
+        font-size: 12px;
+    }
+
+    .menu img{
+        margin-left: 0px;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu span{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu ul{
+        display: none;
+    }
+
+    .menu li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu button{
+        width: 200px;
+    }
+}

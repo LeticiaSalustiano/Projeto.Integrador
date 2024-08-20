@@ -1,0 +1,490 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+ 
+@font-face {
+    font-family: "zen kaku gothic new light";
+    src: url(./fontes/zen-kaku-gothic-new-light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "quantum";
+    src: url(./fontes/Quantum.otf) format("truetype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------Cores-------*/
+:root{
+    --blue: #14C5EC;
+    --light-blue: #BBEEF9;
+    --dark-blue: #095f72;
+    --white: #EDFBFE;
+}
+
+body{   
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    color: #1e1e1e;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);          
+}
+
+/*-------Menu-------*/
+.menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
+    font-family: "Roboto Flex";
+    padding: 20px;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu a{
+    color: var(--white);
+    padding: 10px 17px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+/*-------Botão_de_ajude-------*/
+.menu button{
+    width: 15%;
+    height: 4vh;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*-------Menu_Hamburguer-------*/
+.menu span{
+    display: none;
+}
+
+/*-------Logo-------*/
+.menu img{
+    width: 76px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+/*-------Banner-------*/
+.banner{
+    width: 100%;
+    height: 100vh;
+}
+
+#parallax{
+    width: 100%;
+    height: 60vh;
+    background-image: url(./imagens/Banner_de_cachorro_e_gato.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-------Apoiadores-------*/
+.apoiadores{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--white);
+    font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+/*-------Pessoas-------*/
+.pessoas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pessoas h1{
+    font-size: 90px;
+}
+
+.pessoa{
+    margin-top: 50px;
+}
+
+.pessoa img{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+
+/*-------Placas-------*/
+.placas{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "zen kaku gothic new light";
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/*-------Placa-------*/
+.placa{
+    width: 30%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.178);
+    padding: 10px;
+}
+
+.placa h2{
+    font-size: 30px;
+}
+
+.placa P{
+    width: 50%;
+    font-size: 15px;
+}
+
+.placa img{
+    width: 70%;
+    height: 28vh;
+}
+
+/*-------Links-------*/
+.links{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Slab";
+    gap: 50px;
+}
+
+.links a{
+    color: var(--white);
+    padding: 10px 100px;
+    text-decoration: none;
+    background-color: var(--blue);
+}
+
+/*-------Grafico-------*/
+.grafico{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    box-shadow: -1px -8px 5px 0px rgba(0,0,0,0.06);
+    -webkit-box-shadow: -1px -8px 5px 0px rgba(0,0,0,0.06);
+    -moz-box-shadow: -1px -8px 5px 0px rgba(0,0,0,0.06);
+    gap: 30px;
+}
+
+.grafico img{
+    width: 35%;
+    height: 50vh;
+    border-radius: 20px;
+}
+
+/*-------Titulo-------*/
+.titulo{
+    width: 56%;
+    height: 60vh;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.342);
+    font-family: "Zen Kaku Gothic New";
+}
+
+.titulo h3{
+    color: var(--blue);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/*-------Textos-------*/
+.textos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.texto p{
+    text-align: justify;
+    font-size: 19px;
+}
+
+/*-------Link-------*/
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 70px;
+}
+
+.link a{
+    color: var(--white);
+    padding: 10px 17px;
+    text-decoration: none;
+    background-color: var(--blue);
+    border-radius: 50px;
+}
+
+/*-------Pagina-------*/
+.paginas{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    gap: 20px;
+    margin-top: 25px;
+    box-shadow: -1px -8px 5px 0px rgba(0,0,0,0.06);
+    -webkit-box-shadow: -1px -8px 5px 0px rgba(0,0,0,0.06);
+    -moz-box-shadow: -1px -8px 5px 0px rgba(0,0,0,0.06);
+    font-family: "Zen Kaku Gothic New";
+}
+
+.paginas img{
+    width: 35%;
+    height: 50vh;
+    border-radius: 30px;
+}
+
+/*-------Texto2-------*/
+.texto2{
+    width: 56%;
+    height: 50vh;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: white;
+}
+
+.texto2 p{
+    font-size: 20px;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+/*-------Texto3-------*/
+.texto3{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Yantramanav";
+}
+
+.texto3 p{
+    font-size: 35px;
+}
+
+/*-------Videos-------*/
+.videos{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    box-shadow: -1px -8px 5px 0px rgba(0,0,0,0.06);
+    -webkit-box-shadow: -1px -8px 5px 0px rgba(0,0,0,0.06);
+    -moz-box-shadow: -1px -8px 5px 0px rgba(0,0,0,0.06);
+    gap: 30px;
+}
+
+/*-------Banner2-------*/
+.banner2{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 150px;
+    font-family: "Zen Kaku Gothic New";
+    font-weight: 400;
+    gap: 10px;
+}
+
+/*-------Fonte-------*/
+#font{
+    font-family: 'quantum';
+}
+
+/*-------Responsividade-------*/
+@media screen and (max-width: 768px) {
+    .menu a{
+        font-size: 14px;
+    }
+
+    .menu img{
+        margin-left: 5px;
+    }
+    .pessoa img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .placa{
+        width: 70%;
+        height: 40vh;
+        padding: 10px;
+    }
+
+    .placas{
+        height: 120vh;
+        gap: 10px;
+    }
+
+    .placa h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .placa p{
+        width: 100%;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: justify;
+    }
+
+    .placa img{
+        width: 100%;
+        height: 150px;
+    }
+
+    .links a{
+        padding: 10px 14px;
+        font-size: 11px;
+    }
+
+    .grafico{
+        flex-direction: column-reverse;
+    }
+
+    .grafico img{
+        width: 90%;
+        height: 30vh;
+    }
+
+    .titulo{
+        width: 97%;
+        height: 50vh;
+    }
+
+    .texto p{
+        font-size: 11px;
+        font-weight: 400;
+    }
+
+    .link{
+        margin-top: 20px;
+    }
+
+    .link a{
+        padding: 5px 17px;
+    }
+
+    .paginas{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .paginas img{
+        width: 97%;
+        height: 25vh;
+    }
+
+    .texto2{
+        width: 97%;
+        height: 37vh;
+        padding: 10px;
+    }
+
+    .texto2 p{
+        font-size: 12px;
+    }
+
+    .texto3 p{
+        font-size: 18px;
+    }
+
+    .videos{
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .videos iframe{
+        width: 400px;
+        height: 200px;
+    }
+
+    .banner2{
+        font-size: 12px;
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu span{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu ul{
+        display: none;
+    }
+
+    .menu li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu button{
+        width: 200px;
+    }
+    
+}
