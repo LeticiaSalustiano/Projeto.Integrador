@@ -5,15 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./imagens/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./Styles/formulario.css">
     <title>SAFE PET</title>
 </head>
 <body>
     <nav class="menu">
         <a href="./paginainicial.html"><img src="./imagens/Logo.png" alt=""></a>
-        <span class="material-symbols-outlined" id="menubutton">menu</span>
-        <ul id="menu">
+        <ul>
             <li><a href="./conheça.html">CONHEÇA A SAFE PET</a></li>
             <li><a href="./metodos.html">MÉTODOS</a></li>
             <li><a href="./ajudar.html">COMO POSSO AJUDAR?</a></li>
@@ -21,44 +19,46 @@
         </ul>
         <button><a href="./ajude_agora.html">AJUDE AGORA!</a></button>
     </nav>
-
+ 
     <div class="banner" id="parallax"></div>
-
+ 
     <div class="titulo">
         <h1>Preencha seus Dados</h1>
         <h2>entraremos em contato com você</h2>
         <p>Bem-vindo(a) ao nosso formulário de interesse.</p>
         <p>Ficamos muito felizes por você ter dado o primeiro passo para adotar, apadrinhar ou ser um voluntário PET.</p>
     </div>
-
+ 
     <div class="dados">
         <div class="info">
-            <input type="text" placeholder="Nome Completo:">
-            <input type="text" placeholder="Número Contato:">
-            <input type="text" placeholder="Endereço:">
+            <input type="text" placeholder="Nome Completo:" id="nome">
+            <input type="text" placeholder="Número Contato:" id="numeroContato">
+            <input type="text" placeholder="Endereço:" id="endereco">
         </div>
         <div class="info2">
-            <input type="text" placeholder="CPF:">
-            <input type="text" placeholder="Whatsapp:">
+            <input type="text" placeholder="CPF:" id="cpf">
+            <input type="text" placeholder="Whatsapp:" id="whatsapp">
             <div class="info3">
-                <input type="text" placeholder="Número:">
-                <input type="text" placeholder="Complemento:">
+                <input type="text" placeholder="Número:" id="numero">
+                <input type="text" placeholder="Complemento:" id="complemento">
             </div>
         </div>
     </div>
     <div class="info4">
-        <input type="text" placeholder="Bairro:">
-        <input type="text" placeholder="Cidade:" id="barra">
-        <input type="text" placeholder="Estado:" id="barra2">
+        <input type="text" placeholder="Bairro:" id="bairro">
+        <input type="text" placeholder="Cidade:" id="cidade">
+        <input type="text" placeholder="Estado:" id="estado">
     </div>
     <div class="links">
-        <label for=""><input type="checkbox">Apadrinhar um PET</label>
-        <label for=""><input type="checkbox">Adotar um Pet</label>
-        <label for=""><input type="checkbox">Ser voluntário</label>
+        <label><input type="checkbox" id="apadrinhar"> Apadrinhar um PET</label>
+        <label><input type="checkbox" id="adotar"> Adotar um Pet</label>
+        <label><input type="checkbox" id="voluntario"> Ser voluntário</label>
     </div>
     <div class="botao">
-        <button>Enviar</button>
+        <button id="enviar">Enviar</button>
     </div>
+   
+ 
     <div class="desenho">
         <img src="./imagens/Desenho.png" alt="desenho">
     </div>
@@ -101,6 +101,86 @@
         <h1>Desenvolvido por</h1>
         <h1 id="font">LDGL</h1>
     </div>
-    <script src="./script.js"></script>
 </body>
 </html>
+ 
+<script>
+//formulario
+document.getElementById('enviar').addEventListener('click', function() {
+    // Limpa mensagens anteriores
+    const messageDiv = document.getElementById('message');
+    messageDiv.textContent = '';
+   
+    // Coleta os valores dos campos
+    const nome = document.getElementById('nome').value.trim();
+    const numeroContato = document.getElementById('numeroContato').value.trim();
+    const endereco = document.getElementById('endereco').value.trim();
+    const cpf = document.getElementById('cpf').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+    const numero = document.getElementById('numero').value.trim();
+    const complemento = document.getElementById('complemento').value.trim();
+    const bairro = document.getElementById('bairro').value.trim();
+    const cidade = document.getElementById('cidade').value.trim();
+    const estado = document.getElementById('estado').value.trim();
+ 
+// Validação
+if (!nome || !numeroContato || !endereco || !cpf || !bairro || !cidade || !estado) {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return; // Para a execução se houver campos obrigatórios não preenchidos
+    }
+ 
+    // Cria um objeto com os dados
+    const dados = {
+        nome,
+        numeroContato,
+        endereco,
+        cpf,
+        whatsapp,
+        numero,
+        complemento,
+        bairro,
+        cidade,
+        estado,
+        apadrinhar,
+        adotar,
+        voluntario
+    };
+ 
+    // Exibe os dados no console
+    console.log(dados);
+   
+    // Exibe mensagem de sucesso
+    alert('Dados enviados com sucesso!');
+   
+    // Limpa os campos após o envio
+    document.querySelectorAll('input[type="text"]').forEach(input => input.value = '');
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+});
+ 
+document.getElementById('enviar').addEventListener('click', function() {
+ 
+    // Coleta as opções selecionadas
+    const apadrinhar = document.getElementById('apadrinhar').checked;
+    const adotar = document.getElementById('adotar').checked;
+    const voluntario = document.getElementById('voluntario').checked;
+ 
+    // Exibe uma mensagem com base nas seleções
+    let mensagem = 'Você selecionou: ';
+    let opcoes = [];
+   
+    if (apadrinhar) opcoes.push('Apadrinhar um PET');
+    if (adotar) opcoes.push('Adotar um Pet');
+    if (voluntario) opcoes.push('Ser voluntário');
+   
+    if (opcoes.length > 0) {
+        mensagem = 'Você escolheu: ' + opcoes.join(', ') + '.'; // Corrigido aqui
+    }else {
+        mensagem = 'Nenhuma opção foi selecionada.'; // Alterado para "mensagem ="
+    }
+   
+    alert(mensagem);
+   
+    // ... (código para limpar campos) ...
+});
+ 
+</script>

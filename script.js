@@ -11,24 +11,33 @@ menubutton.addEventListener("click", function() {
 
 
 //carrossel
-const pessoas = document.querySelector('.pessoas');
-const btnEsquerda = document.getElementById('btn-esquerda');
-const btnDireita = document.getElementById('btn-direita');
-
-let index = 0;
-
-function updateCarousel() {
-    const totalImages = pessoas.children.length;
-    const offset = index * -105; 
-    pessoas.style.transform = `translateX(${offset}px)`;
+let currentSlide = 0;
+let autoplayCount = 0; // Contador para o número de vezes que o autoplay rodou
+const maxAutoplay = 3; // Defina o número máximo de vezes que o carrossel deve rodar automaticamente
+ 
+function moveSlide(direction) {
+    const items = document.querySelectorAll('.carousel-item');
+    const totalSlides = items.length;
+ 
+    // Atualiza o índice do slide atual
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+ 
+    // Calcula a nova posição do carrossel
+    const newTransform = -currentSlide * 100; // Cada item ocupa 100% do carrossel
+    document.querySelector('.carousel-inner').style.transform = `translateX(${newTransform}%)`;
 }
+ 
+function autoplay() {
+    if (autoplayCount < maxAutoplay) {
+        moveSlide(1); // Move para o próximo slide
+        autoplayCount++; // Incrementa o contador
+    } else {
+        clearInterval(autoPlayInterval); // Para o autoplay
+    }
+}
+ 
+// Adiciona auto-play (opcional)
+const autoPlayInterval = setInterval(autoplay, 5000); // Muda de slide a cada 5 segundos
 
-btnEsquerda.addEventListener('click', () => {
-    index = (index > 0) ? index - 1 : pessoas.children.length - 1;
-    updateCarousel();
-});
 
-btnDireita.addEventListener('click', () => {
-    index = (index < pessoas.children.length - 1) ? index + 1 : 0;
-    updateCarousel();
-});
+

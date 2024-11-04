@@ -7,12 +7,12 @@
  
 @font-face {
     font-family: "zen kaku gothic new light";
-    src: url(./fontes/zen-kaku-gothic-new-light.ttf) format("truetype");
+    src: url(../fontes/zen-kaku-gothic-new-light.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "quantum";
-    src: url(./fontes/Quantum.otf) format("truetype");
+    src: url(../fontes/Quantum.otf) format("truetype");
 }
 
 *{
@@ -42,6 +42,7 @@ body{
 /*-------Menu-------*/
 .menu{
     width: 100%;
+    height: 14vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,8 +65,8 @@ body{
 
 /*-------Botão_de_ajude-------*/
 .menu button{
-    width: 15%;
-    height: 4vh;
+    width: 200px;
+    height: 40px;
     border: none;
     outline: none;
     border-radius: 50px;
@@ -76,7 +77,11 @@ body{
 }
 
 /*-------Menu_Hamburguer-------*/
-.menu span{
+.menu .botao{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--dark-blue);
     display: none;
 }
 
@@ -88,76 +93,83 @@ body{
 }
 
 /*-------Banner-------*/
-.banner{
-    width: 100%;
-    height: 100vh;
-}
-
-#parallax{
-    width: 100%;
-    height: 60vh;
-    background-image: url(../imagens/Banner_de_cachorro_e_gato.jpg);
+.banner {
+    background-image: url('../imagens/Banner_de_cachorro_e_gato.jpg'); /* Substitua pela sua imagem de fundo */
+    height: 500px; /* Altura do banner */
+    background-attachment: fixed; /* Efeito parallax */
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+}
+ 
+.apoiadores {
+    text-align: center;
+    padding: 20px;
+    background: white; /* Cor de fundo dos apoiadores */
 }
 
-/*-------Apoiadores-------*/
-
-.carrossel h1{
-    font-size: 40px;
-    margin: auto;
+.apoiadores h1{
+    margin: 2%;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-.carrossel {
+ 
+.carousel {
     position: relative;
+    max-width: 70%; /* Largura máxima do carrossel */
+    margin: auto;
     overflow: hidden;
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--white);
-    font-family: "Zen Kaku Gothic New", sans-serif;
 }
-
+ 
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease; /* Transição suave */
+}
+ 
+.carousel-item {
+    min-width: 100%; /* Cada item ocupa 100% do carrossel */
+    box-sizing: border-box;
+}
+ 
 .pessoas {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    transition: transform 0.5s ease;
+    flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte se não houver espaço */
+    gap: 30px; /* Espaço entre as imagens */
 }
-
-.pessoas img {
-    width: 190px; 
-    height: 190px;
-    border-radius: 50%;
-    margin: 0 5px; 
+ 
+.pessoa {
+    width: 150px; /* Largura da imagem */
+    height: 150px; /* Altura da imagem */
+    overflow: hidden; /* Para esconder partes da imagem que saem do contorno */
 }
-
-.btn {
+ 
+.rounded {
+    width: 100%; /* Largura total do contêiner */
+    height: 100%; /* Altura total do contêiner */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover; /* Para manter a proporção da imagem */
+}
+ 
+.carousel-control {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--blue );
-    color: var(--white);
-    border-radius: 7%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
     cursor: pointer;
-    width: 20px;
-    height: 40px;
+    font-size: 24px;
+    padding: 10px;
+}
+ 
+.prev {
+    left: 10px; /* Distância da borda esquerda */
+}
+ 
+.next {
+    right: 10px; /* Distância da borda direita */
 }
 
-.btn.esquerda {
-    left: 10px;
-}
-
-.btn.direita {
-    right: 10px;
-}
-/*-------Placas-------*/
+/*-------Placa-------*/
 .placas{
     width: 100%;
     height: 80vh;
@@ -169,7 +181,6 @@ body{
     gap: 50px;
 }
 
-/*-------Placa-------*/
 .placa{
     width: 30%;
     height: 60vh;
@@ -370,6 +381,24 @@ body{
 
 /*-------Responsividade-------*/
 @media screen and (max-width: 768px) {
+    .menu .botao{
+        display: block;
+    }
+
+    .menu ul{
+        top: 14%;
+        right: 0%;
+        width: 50%;
+        position: absolute;
+        background-color: var(--blue);
+        padding: 10px;
+    }
+
+    .menu li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
     .menu a{
         font-size: 14px;
     }
@@ -377,6 +406,7 @@ body{
     .menu img{
         margin-left: 5px;
     }
+
     .pessoa img{
         width: 70px;
         height: 70px;
@@ -478,33 +508,6 @@ body{
 
     .banner2{
         font-size: 12px;
-    }
-
-    .menu{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .menu span{
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu ul{
-        display: none;
-    }
-
-    .menu li{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .menu button{
-        width: 200px;
     }
     
 }
