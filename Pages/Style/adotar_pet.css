@@ -1,0 +1,199 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+ 
+@font-face {
+    font-family: "zen kaku gothic new light";
+    src: url(../fontes/zen-kaku-gothic-new-light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "quantum";
+    src: url(../fontes/Quantum.otf) format("truetype");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------Cores-------*/
+:root{
+    --blue: #14C5EC;
+    --light-blue: #BBEEF9;
+    --dark-blue: #095f72;
+    --white: #EDFBFE;
+}
+
+body{   
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    color: #1e1e1e;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--white);          
+}
+
+/*-------Menu-------*/
+.menu{
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
+    font-family: "Roboto Flex";
+    padding: 20px;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu a{
+    color: var(--white);
+    padding: 10px 17px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*-------Botão_de_ajude-------*/
+.menu button{
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*-------Menu_Hamburguer-------*/
+.menu .botao{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--dark-blue);
+    display: none;
+}
+
+/*-------Logo-------*/
+.menu img{
+    width: 76px;
+    height: 70px;
+    margin-left: 30px;
+}
+
+/*-----Banner-----*/
+.banner{
+    width: 100%;
+    height: 70vh;
+    background-color: var(--dark-blue);
+}
+
+#parallax{
+    background-image: url(../Img/banner_de_gato.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*-----Titulo-----*/
+.titulo{
+    width: 100%;
+    padding: 30px;
+    background-color: var(--blue);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo h1{
+    font-weight: 400;
+    text-align: center;
+}
+
+/*-----Adotar-----*/
+.adotar{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pets{
+    width: 30%;
+    padding: 7px;
+    border-radius: 10px;
+    background-color: var(--dark-blue);
+}
+
+.img{
+    width: 100%;
+    height: 50vh;
+    background-color: var(--light-blue);
+}
+/*-------Responsividade-------*/
+@media screen and (max-width: 998px) {
+    .menu .botao{
+        display: block;
+    }
+
+    .menu ul{
+        top: 14%;
+        right: 0%;
+        width: 30%;
+        position: absolute;
+        background-color: var(--blue);
+        padding: 10px;
+    }
+
+    .menu li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .menu a{
+        font-size: 14px;
+    }
+
+    .menu img{
+        margin-left: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu .botao{
+        display: block;
+    }
+
+    .menu ul{
+        top: 14%;
+        right: 0%;
+        width: 50%;
+        position: absolute;
+        background-color: var(--blue);
+        padding: 10px;
+    }
+
+    .menu li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .menu a{
+        font-size: 14px;
+    }
+
+    .menu img{
+        margin-left: 5px;
+    }
+}
