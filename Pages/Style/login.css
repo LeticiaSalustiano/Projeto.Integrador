@@ -9,18 +9,18 @@
     font-family: "zen kaku gothic new light";
     src: url(../fontes/zen-kaku-gothic-new-light.ttf) format("truetype");
 }
-
+ 
 @font-face {
     font-family: "quantum";
     src: url(../fontes/Quantum.otf) format("truetype");
 }
-
+ 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+ 
 /*-------Cores-------*/
 :root{
     --blue: #14C5EC;
@@ -28,8 +28,8 @@
     --dark-blue: #095f72;
     --white: #EDFBFE;
 }
-
-body{   
+ 
+body{  
     margin: 0px;
     padding: 0px;
     box-sizing:border-box;
@@ -38,7 +38,7 @@ body{
     width: 100%;
     background-color: var(--white);          
 }
-
+ 
 /*-------Menu-------*/
 .menu{
     width: 100%;
@@ -50,18 +50,18 @@ body{
     font-family: "Roboto Flex";
     padding: 20px;
 }
-
+ 
 .menu li{
     display: inline-block;
 }
-
+ 
 .menu a{
     color: var(--white);
     padding: 10px 17px;
     text-decoration: none;
     font-size: 17px;
 }
-
+ 
 /*-------Botão_de_ajude-------*/
 .menu button{
     width: 200px;
@@ -74,7 +74,7 @@ body{
     font-size: 15px;
     cursor: pointer;
 }
-
+ 
 /*-------Menu_Hamburguer-------*/
 .menu .botao{
     width: 40px;
@@ -83,7 +83,7 @@ body{
     background-color: var(--dark-blue);
     display: none;
 }
-
+ 
 /*-------Logo-------*/
 .menu img{
     width: 76px;
@@ -91,55 +91,77 @@ body{
     margin-left: 30px;
 }
 
-/*-----Banner-----*/
-.banner{
+/*-------Login-------*/
+.login{
     width: 100%;
-    height: 70vh;
-    background-color: var(--dark-blue);
-}
-
-#parallax{
-    background-image: url(../Img/banner_de_gato.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-/*-----Titulo-----*/
-.titulo{
-    width: 100%;
-    padding: 30px;
-    background-color: var(--blue);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.titulo h1{
-    font-weight: 400;
-    text-align: center;
-}
-
-/*-----Adotar-----*/
-.adotar{
-    width: 100%;
-    padding: 10px;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
 }
 
-.pets{
-    width: 30%;
-    padding: 7px;
+.card{
+    width: 35%;
+    height: 57vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.2);
+    border: 1px solid var(--dark-blue);
+}
+
+.card h2{
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 50px;
+    color: var(--white);
+}
+
+.card button{
+    width: 100%;
+    height: 50px;
+    border: none;
     border-radius: 5px;
     background-color: var(--dark-blue);
+    color: var(--white);
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.pets img{
+/*-----Info-----*/
+.info{
     width: 100%;
-    height: 50vh;
-    background-color: var(--light-blue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.info label{
+    font-family: "Roboto";
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
+    color: var(--dark-blue);
+}
+
+.info input{
+    width: 100%;
+    height: 7vh;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--white);
+    color: black;
+    padding: 0px 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.info input::placeholder{
+    color: black;
 }
 
 /*-------Responsividade-------*/
@@ -170,12 +192,12 @@ body{
         margin-left: 5px;
     }
 
-    .banner{
-        height: 50vh;
+    .login{
+        height: 80vh;
     }
 
-    .pets{
-        width: 40%;
+    .card{
+        width: 50%;
     }
 }
 
@@ -206,11 +228,11 @@ body{
         margin-left: 5px;
     }
 
-    .banner{
-        height: 47vh;
+    .login{
+        height: 80vh;
     }
 
-    .pets{
+    .card{
         width: 90%;
     }
 }
